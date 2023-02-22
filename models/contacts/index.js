@@ -19,7 +19,7 @@ const getContactById = async (id) => {
 const addContact = async (data) => {
   const contacts = await listContacts();
   const newContact = {
-    id: nanoid(),
+    id: nanoid(4),
     ...data,
   }
   contacts.push(newContact);
