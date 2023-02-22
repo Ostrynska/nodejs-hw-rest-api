@@ -8,7 +8,6 @@ const listContacts = async () =>
 {
   const data = await fs.readFile(contactsPath)
   return JSON.parse(data)
-
 }
 
 const getContactById = async (id) => {
