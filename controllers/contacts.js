@@ -2,7 +2,7 @@ const {Contact} = require('../models/contact');
 const { HttpError, ctrlWrapper } = require("../helpers");
 
 const listContacts = async (req, res) => {
-    const result = await Contact.find();
+    const result = await Contact.find({}, "-createdAt -updatedAt");
     res.json(result);  
 }
 
