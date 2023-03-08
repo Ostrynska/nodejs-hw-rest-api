@@ -7,7 +7,6 @@ const ctrlWrapper = ctrl => {
             next(error);
         }
     }
-
     return fn;
 }
 
