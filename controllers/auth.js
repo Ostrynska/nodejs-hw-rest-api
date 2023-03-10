@@ -105,7 +105,7 @@ const updateAvatar = async (req, res) =>
     const resultUpload = path.join(avatarsDir, filename);
     if (!tmpUpload) {
         await fs.unlink(tmpUpload);
-        throw HttpError(401, "authorized");
+        throw HttpError(401, "Not authorized");
     }    
     await fs.rename(tmpUpload, resultUpload);
     const avatarURL = path.join('avatars', filename);
